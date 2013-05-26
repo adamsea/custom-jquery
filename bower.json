@@ -1,0 +1,5 @@
+{
+	"name": "custom-jquery",
+	"version": "2.0.1",
+	"main": "jquery.js"
+}
