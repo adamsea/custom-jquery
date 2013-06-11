@@ -8,7 +8,7 @@
 
 
 
-/*! jQuery v2.0.1 -sizzle,-ajax,-ajax/script,-ajax/jsonp,-ajax/xhr,-effects,-deprecated | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
+/*! jQuery v2.0.2 -sizzle,-ajax,-ajax/script,-ajax/jsonp,-ajax/xhr,-effects,-deprecated | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery.min.map
 */
 (function( window, undefined ) {
@@ -46,7 +46,7 @@ var
 	// List of deleted data cache ids, so we can reuse them
 	core_deletedIds = [],
 
-	core_version = "2.0.1 -sizzle,-ajax,-ajax/script,-ajax/jsonp,-ajax/xhr,-effects,-deprecated",
+	core_version = "2.0.2 -sizzle,-ajax,-ajax/script,-ajax/jsonp,-ajax/xhr,-effects,-deprecated",
 
 	// Save a reference to some core methods
 	core_concat = core_deletedIds.concat,
@@ -1867,7 +1867,6 @@ jQuery.extend({
 			startLength--;
 		}
 
-		hooks.cur = fn;
 		if ( fn ) {
 
 			// Add a progress sentinel to prevent the fx queue from being
@@ -3483,9 +3482,7 @@ jQuery.each({
 		return jQuery.sibling( elem.firstChild );
 	},
 	contents: function( elem ) {
-		return jQuery.nodeName( elem, "iframe" ) ?
-			elem.contentDocument || elem.contentWindow.document :
-			jQuery.merge( [], elem.childNodes );
+		return elem.contentDocument || jQuery.merge( [], elem.childNodes );
 	}
 }, function( name, fn ) {
 	jQuery.fn[ name ] = function( until, selector ) {
